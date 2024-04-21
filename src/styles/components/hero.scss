@@ -47,7 +47,7 @@ body {
 
         animation: stickyHero linear both;
         animation-duration: auto;
-        animation-timeline: scroll(root block);
+        animation-timeline: view(/*root block*/);
         animation-range: cover 0% cover 100%;
 
         &:nth-child(even) {
