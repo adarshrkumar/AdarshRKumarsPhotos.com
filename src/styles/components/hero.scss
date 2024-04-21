@@ -10,7 +10,7 @@ body {
     & > * {
         animation: afterHero linear both;
         animation-duration: auto;
-        animation-timeline: view(root block);
+        animation-timeline: view();
         animation-range: cover 0% cover 100%;
     }
     & > :first-child {
