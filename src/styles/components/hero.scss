@@ -6,8 +6,15 @@ body {
     background-color: white;
 }
 
-:has(> .hero) > :last-child :last-child {
-    margin-bottom: 0;
+:has(> .hero) > :last-child {
+    animation: afterHero linear both;
+    animation-duration: auto;
+    animation-timeline: view(root block);
+    animation-range: cover 0% cover 100%;
+
+    :last-child {
+        margin-bottom: 0;
+    }
 }
 
 .hero {
