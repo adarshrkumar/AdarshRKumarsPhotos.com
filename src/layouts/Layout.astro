@@ -36,9 +36,7 @@ import '../styles/globals.scss'
 	<body>
 		<main>
 			{
-				if (title === 'Home') {
-					return <Hero />
-				}
+				title === 'Home' ? <Hero /> : ''
 			}
 			<section class="page-content">
 				<slot />
