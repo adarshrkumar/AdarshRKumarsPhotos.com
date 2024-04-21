@@ -5,8 +5,11 @@ npm create astro@latest -- --template basics
 ```
 
 [Open in StackBlitz](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+
 [Open with CodeSandbox](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+
 [Open in GitHub Codespaces](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
