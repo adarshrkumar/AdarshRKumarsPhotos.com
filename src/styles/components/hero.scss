@@ -2,7 +2,7 @@ body {
     z-index: 1;
 }
 
-.hero + script + * {
+.hero + script + :is(*:not(.columns, .rows), .columns > .column, .rows > .row) {
     background-color: white;
 }
 
