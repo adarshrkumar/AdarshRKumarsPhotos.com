@@ -7,13 +7,27 @@ body {
 }
 
 :has(> .hero) > :last-child {
-    animation: afterHero linear both;
-    animation-duration: auto;
-    animation-timeline: view(root block);
-    animation-range: cover 0% cover 100%;
+    & > * {
+        animation: afterHero linear both;
+        animation-duration: auto;
+        animation-timeline: view(root block);
+        animation-range: cover 0% cover 100%;
+    }
+    & > :first-child {
+        --dir: -1;
+    }
+    & > :last-child {
+        --dir: 0;
+    }
 
     :last-child {
         margin-bottom: 0;
+    }
+
+    @keyframes afterHero {
+        from {
+            transform: translateX(calc(var(--dir)*100%))
+        }
     }
 }
 
