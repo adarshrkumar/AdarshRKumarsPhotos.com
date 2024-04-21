@@ -2,9 +2,12 @@ body {
     z-index: 1;
 }
 
-.page-content {
+.hero + * {
     background-color: white;
-    & > *:last-child {
+}
+
+:has(> .hero) :last-child {
+    & > :last-child {
         margin-bottom: 0;
     }
 }
