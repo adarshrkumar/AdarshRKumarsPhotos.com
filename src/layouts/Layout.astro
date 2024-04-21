@@ -35,7 +35,14 @@ import '../styles/globals.scss'
 	</head>
 	<body>
 		<main>
-			<slot />
+			{
+				if (title === 'Home') {
+					return <Hero />
+				}
+			}
+			<section class="page-content">
+				<slot />
+			</section>
 		</main>
 	</body>
 </html>
