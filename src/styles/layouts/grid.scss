@@ -7,10 +7,10 @@
         }
     }
 
-    .column {
+    &.column {
         grid-template-rows: repeat(var(--cells), 1fr);
     }
-    .row {
+    &.row {
         grid-template-columns: repeat(var(--cells), 1fr);
     }
 }
