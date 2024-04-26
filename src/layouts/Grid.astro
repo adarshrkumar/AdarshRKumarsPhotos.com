@@ -1,0 +1,12 @@
+---
+import '../styles/layouts/grid.scss'
+
+var { direction, cells } = Astro.props;
+if (cells) cells = parseInt(cells)
+if (!!cells === false || cells < 0) cells = 2
+
+var className = ['grid']
+---
+<section class={className} cells={cells}>
+    <slot />
+</section>

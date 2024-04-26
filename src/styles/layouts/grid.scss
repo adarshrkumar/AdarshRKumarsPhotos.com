@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+
+    $cells: attr(cells);
+
+    .column {
+        grid-template-rows: repeat($cells, 1fr);
+    }
+    .row {
+        grid-template-columns: repeat($cells, 1fr);
+    }
+}
