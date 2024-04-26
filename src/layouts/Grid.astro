@@ -5,7 +5,7 @@ var { direction, cells } = Astro.props;
 if (cells) cells = parseInt(cells)
 if (!!cells === false || cells < 0) cells = 2
 
-var className = ['grid']
+var className = ['grid', direction]
 ---
 <section class={className} cells={cells}>
     <slot />
