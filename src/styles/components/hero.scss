@@ -55,6 +55,10 @@ body {
 
         z-index: -1;
     }
+    &__columns {
+        position: absolute;
+        inset: 0;
+    }
     &__column {
         height: 200dvh;
         max-width: 100%;
