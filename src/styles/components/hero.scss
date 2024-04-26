@@ -47,6 +47,11 @@ body {
         inset: 0;
 
         height: 100dvh;
+    }
+    &__columns {
+        position: absolute;
+        inset: 0;
+        height: inherit;
 
         display: flex;
         justify-content: space-evenly;
@@ -54,10 +59,6 @@ body {
         overflow: hidden;
 
         z-index: -1;
-    }
-    &__columns {
-        position: absolute;
-        inset: 0;
     }
     &__column {
         height: 200dvh;
