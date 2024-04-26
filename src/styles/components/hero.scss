@@ -11,7 +11,7 @@ body {
         animation: afterHero linear both;
         animation-duration: auto;
         animation-timeline: view();
-        animation-range: cover 0% cover 100%;
+        animation-range: contain 0% contain 50%;
     }
     &.grid > :first-child {
         --dir: -1;
