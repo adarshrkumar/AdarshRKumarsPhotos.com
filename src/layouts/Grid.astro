@@ -7,6 +7,6 @@ if (!!cells === false || cells < 0) cells = 2
 
 var className = ['grid', direction]
 ---
-<section class={className} cells={cells}>
+<section class={className.join(' ')} cells={cells}>
     <slot />
 </section>
