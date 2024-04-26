@@ -1,7 +1,11 @@
 .grid {
     display: grid;
 
-    $cells: attr(cells);
+    @for $i from 0 through 1000 {
+        &[cells="#{$i}"] {
+            $cells: $i
+        }
+    }
 
     .column {
         grid-template-rows: repeat($cells, 1fr);
