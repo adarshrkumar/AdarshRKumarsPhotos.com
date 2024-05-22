@@ -40,6 +40,11 @@ var imgs = [
                                 return <img src={`/imgs/${img}`} alt="" class="hero__column__image" />
                             })
                         }
+                        {
+                            column.map(img => {
+                                return <img src={`/imgs/${img}`} alt="" class="hero__column__image" />
+                            })
+                        }
                     </div>)
                 })
             }
