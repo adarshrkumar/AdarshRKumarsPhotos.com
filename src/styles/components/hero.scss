@@ -62,7 +62,7 @@ body {
     }
     &__column {
         box-sizing: border-box;
-        padding-block: calc($_gap/2);
+        padding-block: #{math.div($_gap, 2)};
 
         height: 200dvh;
         max-width: 100%;
