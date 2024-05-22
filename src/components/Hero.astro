@@ -34,13 +34,13 @@ var imgs = [
         <div class="hero__columns">
             {
                 imgs.map(column => {
-                    <div class="hero__column">
+                    return(<div class="hero__column">
                         {
                             column.map(img => {
-                                <img src={`/imgs/${img}`} alt="" class="hero__column__image" />
+                                return <img src={`/imgs/${img}`} alt="" class="hero__column__image" />
                             })
                         }
-                    </div>
+                    </div>)
                 })
             }
         </div>
