@@ -7,3 +7,7 @@ html, body {
 body {
     margin: 0;
 }
+
+img:not(.hero__column__image), video, media, object, iframe {
+    max-width: 100%;
+}

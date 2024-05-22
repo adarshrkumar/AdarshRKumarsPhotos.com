@@ -1,66 +1,48 @@
 ---
 import '../styles/components/hero.scss'
 
+var imgs = [
+    [
+        "IMG_0135.jpg"
+        "IMG_0136.jpg"
+        "IMG_0137.jpg"
+        "IMG_0138.jpg"
+    ],
+    [
+        "IMG_0139.jpg"
+        "IMG_0140.jpg"
+        "IMG_0141.jpg"
+        "IMG_0142.jpg"
+    ],
+    [
+        "IMG_0143.jpg"
+        "IMG_0144.jpg"
+        "IMG_0145.jpg"
+        "IMG_0146.jpg"
+    ],
+    [
+        "IMG_0147.jpg"
+        "IMG_0148.jpg"
+        "IMG_0149.jpg"
+        "IMG_0150.jpg"
+    ],
+]
+
 ---
 <section class="hero">
     <div class="hero__content">
         <div class="hero__columns">
-            <div class="hero__column">
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0135.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0136.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0137.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0138.jpg" alt="" class="hero__column__image">
-                </div>
-            </div>
-            <div class="hero__column">
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0139.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0140.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0141.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0142.jpg" alt="" class="hero__column__image">
-                </div>
-            </div>
-            <div class="hero__column">
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0143.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0144.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0145.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0146.jpg" alt="" class="hero__column__image">
-                </div>
-            </div>
-            <div class="hero__column">
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0147.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0148.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0149.jpg" alt="" class="hero__column__image">
-                </div>
-                <div class="hero__column__content">
-                    <img src="/imgs/IMG_0150.jpg" alt="" class="hero__column__image">
-                </div>
-            </div>
+            {
+                imgs.map(column => {
+                    <div class="hero__column">
+                        {
+                            column.map(img => {
+                                <img src={`/imgs/${img}`} alt="" class="hero__column__image" />
+                            })
+                        }
+                    </div>
+                })
+            }
         </div>
     </div>
 </section>
