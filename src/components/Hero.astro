@@ -33,11 +33,13 @@ var imgs = [
     <div class="hero__content">
         <div class="hero__columns">
             {
-                imgs.map(column => {
+                imgs.map((column, i) => {
                     return(<div class="hero__column">
                         {
                             column.map(img => {
-                                return <img src={`/imgs/${img}`} alt="" class="hero__column__image" />
+                                var even = (i+1)%2 === 0
+                                if (even) return <div class="hero__column__image" />
+                                else return <img src={`/imgs/${img}`} alt="" class="hero__column__image" />
                             })
                         }
                         {
