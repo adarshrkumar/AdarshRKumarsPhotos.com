@@ -18,6 +18,9 @@ if (
 	dTitle = `${title} | ${dTitle}`
 }
 
+var showHero = false
+if (title === 'Home') showHero = true
+
 // Components
 import Hero from '../components/Hero.astro';
 import ScrollThing from '../components/ScrollThing.astro';
