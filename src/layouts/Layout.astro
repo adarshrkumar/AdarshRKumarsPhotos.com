@@ -18,11 +18,9 @@ if (
 	dTitle = `${title} | ${dTitle}`
 }
 
-var showHero = false
-if (title === 'Home') showHero = true
-
 // Components
 import Hero from '../components/Hero.astro';
+import ScrollThing from '../components/ScrollThing.astro';
 
 // Styles
 import '../styles/globals.scss'
@@ -42,7 +40,10 @@ import '../styles/globals.scss'
 	<body>
 		<main>
 			{
-				showHero ? <Hero sURL={sURL} /> : ''
+				showHero ? (
+					<Hero />
+					<ScrollThing />
+				) : ''
 			}
 			<section class="page-content">
 				<slot />

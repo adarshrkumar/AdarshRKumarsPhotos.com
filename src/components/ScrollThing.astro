@@ -1,0 +1,25 @@
+---
+import '../styles/components/hero.scss'
+
+var text = [
+    '', 
+    '', 
+]
+
+---
+<section class="scroll__thing">
+    {
+        text.map(t => {
+            <div class="scroll__row">
+                <span class="scroll__item">{t}</span>
+            </div>
+        })
+    }
+</section>
+<!-- <script is:inline>
+    document.querySelectorAll('.hero__column__content').forEach(function(node, i) {
+        var newNode = node.cloneNode(true)
+        newNode.setAttribute('aria-hidden', true)
+        node.parentNode.appendChild(newNode)
+    })
+</script> -->
