@@ -41,8 +41,7 @@ var imgs = [
                             column.map(img => {
                                 var odd  = (i+0)%2 === 0
                                 var even = (i+1)%2 === 0
-                                if (odd) return <div class="hero__column__image" />
-                                else return <img src={`/imgs/${img}`} alt="" class="hero__column__image" />
+                                return <img src={`/imgs/${img}`} alt="" class="hero__column__image" />
                             })
                         }
                         {
