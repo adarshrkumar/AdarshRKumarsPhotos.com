@@ -22,9 +22,11 @@ var text = [
     {
         text.map(item => {
             item = `<span>${item.join(`</span><span>`)}</span>`
-            return (<div class="scroll__row">
-                <span class="scroll__item" set:html={item}></span>
-            </div>)
+            return (
+                <div class="scroll__row">
+                    <!-- <span class="scroll__item" set:html={item}></span> -->
+                </div>
+            )
         })
     }
 </section>
