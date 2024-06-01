@@ -17,18 +17,17 @@ var text = [
     ], 
 ]
 
+text.forEach((item, i) => {
+    text[i] = `<span>${item.join(`</span><span>`)}</span>`
+})
+
+
 ---
 <section class="scroll__thing" style={`--rows: ${text.length}; --padding: ${scrollPadding};`}>
     {
         text.map(item => {
             <div class="scroll__row">
-                <span class="scroll__item">
-                    {
-                        item.map(t => {
-                            <span>{t}</span>
-                        })
-                    }
-                </span>
+                <span class="scroll__item" set:html={item}></span>
             </div>
         })
     }
