@@ -1,6 +1,7 @@
 ---
 import '../styles/components/scrollThing.scss'
 
+var scrollPadding = 1 + 'rem'
 var text = [
     [
         'Coder', 
@@ -17,7 +18,7 @@ var text = [
 ]
 
 ---
-<section class="scroll__thing" style={`--rows: ${text.length};`}>
+<section class="scroll__thing" style={`--rows: ${text.length}; --padding: ${scrollPadding};`}>
     {
         text.map(item => {
             <div class="scroll__row">
@@ -32,10 +33,22 @@ var text = [
         })
     }
 </section>
-<!-- <script is:inline>
-    document.querySelectorAll('.hero__column__content').forEach(function(node, i) {
-        var newNode = node.cloneNode(true)
-        newNode.setAttribute('aria-hidden', true)
-        node.parentNode.appendChild(newNode)
+<script>
+    var cEle = document.createElement('div')
+    cEle.style = `width: ${scrollPadding}`
+    document.body.appendChild(cEle)
+    var cWidth = cEle.clientWidth
+    cEle.remove()
+
+    var wWidth = window.innerWidth
+
+    document.querySelectorAll('.scroll__thing .scroll__row .scroll__item').forEach(function(item, i) {
+        var iWidth = item.clientWidth
+
+        if (iWidth < wWidth) {
+            var newNode = item.cloneNode(true)
+            item.parentNode.appendChild(item)
+            iWidth += (cWidth + newNode.clientWidth)
+        }
     })
-</script> -->
+</script>
