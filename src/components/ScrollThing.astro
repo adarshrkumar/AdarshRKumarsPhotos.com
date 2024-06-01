@@ -2,16 +2,32 @@
 import '../styles/components/scrollThing.scss'
 
 var text = [
-    '', 
-    '', 
+    [
+        'Coder', 
+        'Photographer', 
+        'Musician', 
+        'Amateur Astronomer', 
+    ], 
+    [
+        'Amateur Astronomer', 
+        'Musician', 
+        'Photographer', 
+        'Coder', 
+    ], 
 ]
 
 ---
 <section class="scroll__thing" style={`--rows: ${text.length};`}>
     {
-        text.map(t => {
+        text.map(item => {
             <div class="scroll__row">
-                <span class="scroll__item">{t}</span>
+                <span class="scroll__item">
+                    {
+                        item.map(t => {
+                            <span>{t}</span>
+                        })
+                    }
+                </span>
             </div>
         })
     }
