@@ -21,7 +21,7 @@ var text = [
 <section class="scroll__thing" style={`--rows: ${text.length}; --padding: ${scrollPadding};`}>
     {
         text.map(item => {
-            // item = `<span>${item.join(`</span><span>`)}</span>`
+            item = `<span>${item.join('</span><span>')}</span>`
             return (
                 <div class="scroll__row" set:html={item}>
                     
@@ -32,7 +32,7 @@ var text = [
 </section>
 <script>
     var cEle = document.createElement('div')
-    // cEle.style = `width: ${scrollPadding}`
+    cEle.style = `width: ${scrollPadding}`
     document.body.appendChild(cEle)
     var cWidth = cEle.clientWidth
     cEle.remove()
