@@ -20,11 +20,14 @@ var text = [
 ---
 <section class="scroll__thing" style={`--rows: ${text.length}; --padding: ${scrollPadding};`}>
     {
-        text.map(item => {
-            item = `<span class="scroll__item">${item.join('</span><span class="scroll__item">')}</span>`
+        text.map(t => {
             return (
-                <div class="scroll__row" set:html={item}>
-                    
+                <div class="scroll__row">
+                    {
+                        t.map(item => {
+                            <span class="scroll__item">{item}</span>
+                        })
+                    }
                 </div>
             )
         })
