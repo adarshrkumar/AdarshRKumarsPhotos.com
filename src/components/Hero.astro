@@ -42,12 +42,16 @@ for (let i = 0; i < columns; i++) {
     <div class="hero__content">
         <div class="hero__columns">
             {
+                console.log(images)
+                return JSON.stringify(images)
+            }
+            <!-- {
                 images.map((img, i) => {
                     imgs[i%columns].push(img)
                     return ''
                 })
-            }
-            {
+            } -->
+            <!-- {
                 imgs.map((column, i) => {
                     return(<div class="hero__column">
                         {
@@ -64,7 +68,7 @@ for (let i = 0; i < columns; i++) {
                         }
                     </div>)
                 })
-            }
+            } -->
         </div>
     </div>
 </section>
