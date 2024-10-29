@@ -1,37 +1,52 @@
 ---
 import '../styles/components/hero.scss'
 
-var imgs = [
-    [
-        "IMG_0135.jpg", 
-        "IMG_0136.jpg", 
-        "IMG_0137.jpg", 
-        "IMG_0138.jpg", 
-    ],
-    [
-        "IMG_0139.jpg", 
-        "IMG_0140.jpg", 
-        "IMG_0141.jpg", 
-        "IMG_0142.jpg", 
-    ],
-    [
-        "IMG_0143.jpg", 
-        "IMG_0144.jpg", 
-        "IMG_0145.jpg", 
-        "IMG_0146.jpg", 
-    ],
-    [
-        "IMG_0147.jpg", 
-        "IMG_0148.jpg", 
-        "IMG_0149.jpg", 
-        "IMG_0150.jpg", 
-    ],
-]
+var images = Astro.glob('../../public/imgs')
+
+var imgs = []
+var columns = 4
+
+for (let i = 0; i < columns; i++) {
+    imgs.push([])
+}
+
+// var imgs = [
+//     [
+//         "IMG_0135.jpg", 
+//         "IMG_0136.jpg", 
+//         "IMG_0137.jpg", 
+//         "IMG_0138.jpg", 
+//     ],
+//     [
+//         "IMG_0139.jpg", 
+//         "IMG_0140.jpg", 
+//         "IMG_0141.jpg", 
+//         "IMG_0142.jpg", 
+//     ],
+//     [
+//         "IMG_0143.jpg", 
+//         "IMG_0144.jpg", 
+//         "IMG_0145.jpg", 
+//         "IMG_0146.jpg", 
+//     ],
+//     [
+//         "IMG_0147.jpg", 
+//         "IMG_0148.jpg", 
+//         "IMG_0149.jpg", 
+//         "IMG_0150.jpg", 
+//     ],
+// ]
 
 ---
 <section class="hero">
     <div class="hero__content">
         <div class="hero__columns">
+            {
+                images.map((img, i) => {
+                    imgs[i%columns].push(img)
+                    return ''
+                })
+            }
             {
                 imgs.map((column, i) => {
                     return(<div class="hero__column">
