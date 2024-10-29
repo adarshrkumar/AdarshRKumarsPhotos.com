@@ -1,7 +1,7 @@
 ---
 import '../styles/components/hero.scss'
 
-var images = await Astro.glob('../../public/imgs/*')
+var images = await Astro.glob('../../imgs/*')
 
 var imgs = []
 var columns = 4
@@ -41,12 +41,12 @@ for (let i = 0; i < columns; i++) {
     <div class="hero__content">
         <div class="hero__columns">
             <pre>{ JSON.stringify(images, null, 4) }</pre>
-            <!-- {
+            {
                 images.map((img, i) => {
                     imgs[i%columns].push(img)
                     return ''
                 })
-            } -->
+            }
             <!-- {
                 imgs.map((column, i) => {
                     return(<div class="hero__column">
