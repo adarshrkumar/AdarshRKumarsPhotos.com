@@ -53,12 +53,12 @@ for (let i = 0; i < columns; i++) {
                             column.map(img => {
                                 var odd  = (i+0)%2 === 0
                                 var even = (i+1)%2 === 0
-                                return <img src={`/imgs/${img}`} alt="" class="hero__column__image" />
+                                return <img src={img.url} alt="" class="hero__column__image" />
                             })
                         }
                         {
                             column.map(img => {
-                                return <img src={`/imgs/${img}`} alt="" class="hero__column__image" />
+                                return <img src={img.url} alt="" class="hero__column__image" />
                             })
                         }
                     </div>)
