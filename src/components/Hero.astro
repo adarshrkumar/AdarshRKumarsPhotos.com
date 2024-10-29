@@ -1,7 +1,7 @@
 ---
 import '../styles/components/hero.scss'
 
-var images = Astro.glob('../../public/imgs/*')
+var images = await Astro.glob('../../public/imgs/*')
 
 var imgs = []
 var columns = 4
