@@ -40,13 +40,13 @@ for (let i = 0; i < columns; i++) {
 <section class="hero">
     <div class="hero__content">
         <div class="hero__columns">
-            <pre>{ JSON.stringify(images, null, 4) }</pre>
             {
                 images.map((img, i) => {
-                    imgs[i%columns].push(img)
+                    imgs[i%columns].push(img.default)
                     return ''
                 })
             }
+            <pre>{ JSON.stringify(imgs, null, 4) }</pre>
             <!-- {
                 imgs.map((column, i) => {
                     return(<div class="hero__column">
